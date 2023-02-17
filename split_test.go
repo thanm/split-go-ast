@@ -15,9 +15,12 @@ import (
 
 func TestBasic(t *testing.T) {
 	tdir := t.TempDir()
-	tdir = "/tmp/qqq"
-	os.RemoveAll(tdir)
-	os.Mkdir(tdir, 0777)
+
+	if false {
+		tdir = "/tmp/qqq"
+		os.RemoveAll(tdir)
+		os.Mkdir(tdir, 0777)
+	}
 
 	// Do a build of . into <tmpdir>/out.exe with -W=2
 	exe := filepath.Join(tdir, "out.exe")
